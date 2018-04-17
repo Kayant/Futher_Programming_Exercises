@@ -1,7 +1,7 @@
 /**
  *
  * @author Kayant
- * @version 1.0
+ * @version 1.1 Refactor variable names to be less vague and meaningless.  
  */
 public class Sterling {
     
@@ -26,18 +26,18 @@ public class Sterling {
     /**
      * Use getValue method to get the value passed to v2 object then
      * add it to the current amount.
-     * @param v2 Amount to be added to current value 
+     * @param newValue Amount to be added to current value 
      */
-    public void addToValue(Sterling v2){
-        this.value += v2.getValue();
+    public void addToValue(Sterling newValue){
+        this.value += newValue.getValue();
     }
     
     /**
      * Casting is used as we don't care too much about the lose in precision 
      * we just need the calculated percentage as an int to add to our current value 
-     * @param d Percentage of current value to be added 
+     * @param perChange Percentage of current value to be added 
      */
-    public void changeByPercentage(double d){
-        this.value += (int)(this.value*d/100);
+    public void changeByPercentage(double perChange){
+        this.value = (int)(this.value*perChange/100);
     }
 }
